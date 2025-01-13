@@ -1,0 +1,462 @@
+<html>
+
+<head>
+    <base href="." target="_blank">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top 20 Películas de Todos los Tiempos</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: #0f0f1a;
+            color: #fff;
+            width: 100%;
+            overflow-x: hidden;
+        }
+
+        .header {
+            background: linear-gradient(45deg, #1a1a2e, #16213e);
+            padding: 2rem 1rem;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .header h1 {
+            font-size: clamp(1.5rem, 4vw, 2.5rem);
+            word-wrap: break-word;
+        }
+
+        .movie-container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .movie-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 1rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+        }
+
+        .movie-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .movie-image {
+            width: 100%;
+            height: 0;
+            padding-bottom: 150%;
+            /* Mantiene relación de aspecto 2:3 */
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        .movie-image img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .rank {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #e63946;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            z-index: 1;
+            font-size: 0.9rem;
+        }
+
+        .movie-title {
+            font-size: clamp(1.2rem, 3vw, 1.5rem);
+            margin: 1rem 0;
+            color: #ffd700;
+            word-wrap: break-word;
+        }
+
+        .movie-info {
+            font-size: clamp(0.8rem, 2vw, 0.9rem);
+            color: #ccc;
+        }
+
+        .movie-info p {
+            margin: 0.5rem 0;
+        }
+
+        .rating {
+            display: flex;
+            align-items: center;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .stars {
+            color: #ffd700;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .movie-card {
+            animation: fadeIn 0.6s ease forwards;
+        }
+
+        /* Ajustes responsivos adicionales */
+        @media (max-width: 640px) {
+            .movie-container {
+                grid-template-columns: 1fr;
+                padding: 0 0.5rem;
+            }
+
+            .movie-card {
+                padding: 0.8rem;
+            }
+        }
+
+        @media (min-width: 641px) and (max-width: 1024px) {
+            .movie-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1>🎬 Próximos Estrenos | 2025 🌟</h1>
+    </div>
+
+    <div class="movie-container">
+        <div class="movie-card" style="animation-delay: 0.1s">
+            <div class="rank">1</div>
+            <div class="movie-image">
+                <img src="The Conjuring: Last Rites-2025.jpg" alt="The Conjuring: Last Rites-2025">
+            </div>
+            <h2 class="movie-title">The Conjuring: Last Rites</h2>
+            <div class="movie-info">
+                <strong><p>Director:</strong> Michael Chaves.</p>
+                <strong><p>Año:</strong> 2025</p>
+                <strong><p>Género:</strong> Terror.</p>
+                <strong><p>Sinopsis:</strong> The Conjuring: Last Rites está programado para estrenarse en los Estados Unidos el 5 de
+                    septiembre de 2025 por Warner Bros. Pictures.</p>
+                <div class="rating">
+                    <!-- <span class="stars">★★★★★</span>
+                    <span>9.2/10</span> -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Repito la estructura para las otras películas con los mismos ajustes responsivos -->
+        <div class="movie-card" style="animation-delay: 0.2s">
+            <div class="rank">2</div>
+            <div class="movie-image">
+                <img src="M3gan 2.0.jpg" alt="M3gan 2.0-2025">
+            </div>
+            <h2 class="movie-title">M3gan 2.0</h2>
+            <div class="movie-info">
+                <p>Director: </p>
+                <p>Año: 2025</p>
+                <p>Género: Terror, Ciencia Ficción</p>
+                <p>Sinopsis: M3GAN 2.0 es la próxima película de terror de ciencia ficción estadounidense dirigida por
+                    Gerard
+                    Johnstone y escrita por Akela Cooper. Allison Williams y Violet McGraw vuelven a protagonizar.</p>
+                <div class="rating">
+                    <!-- <span class="stars">★★★★★</span>
+                    <span>9.3/10</span>-->
+                </div>
+            </div>
+        </div>
+
+        <!-- Repito la estructura para las otras películas con los mismos ajustes responsivos -->
+        <div class="movie-card" style="animation-delay: 0.2s">
+            <div class="rank">3</div>
+            <div class="movie-image">
+                <img src="28 años después.jpg" alt="28 años después">
+            </div>
+            <h2 class="movie-title">28 años después</h2>
+            <div class="movie-info">
+                <p>Director:</p>
+                <p>Año:2025</p>
+                <p>Género: Terror, Suspenso.</p>
+                <p>Sinopsis: 28 Years Later es una próxima película de terror post-apocalíptica dirigida por Danny
+                    Boyle, a partir de un guion que coescribió con Alex Garland.</p>
+                <div class="rating">
+                    <!-- <span class="stars">★★★★★</span>
+                    <span>9.3/10</span>-->
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Repito la estructura para las otras películas con los mismos ajustes responsivos -->
+        <div class="movie-card" style="animation-delay: 0.2s">
+            <div class="rank">4</div>
+            <div class="movie-image">
+                <img src="They Follow-2025.jpg" alt="They Follow-2025">
+            </div>
+            <h2 class="movie-title">They Follow</h2>
+            <div class="movie-info">
+                <p>Director:</p>
+                <p>Año: 2025</p>
+                <p>Género: Terror, Secuela</p>
+                <p>Sinopsis: Secuela de "It Follows" (2014). </p>
+                <div class="rating">
+                    <!-- <span class="stars">★★★★★</span>
+                    <span>9.3/10</span>-->
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Repito la estructura para las otras películas con los mismos ajustes responsivos -->
+        <div class="movie-card" style="animation-delay: 0.2s">
+            <div class="rank">5</div>
+            <div class="movie-image">
+                <img src="ScreamvII-2025.jpg" alt="Cadena Perpetua">
+            </div>
+            <h2 class="movie-title">Scream VII</h2>
+            <div class="movie-info">
+                <p>Director: Kevin Williamson </p>
+                <p>Año: 2026</p>
+                <p>Género: Terror, Suspenso</p>
+                <p>Sinopsis: Scream 7 no se estrenará en 2025, sino el 27 de febrero de 2026. La fecha de estreno se
+                    anunció en octubre de 2024 por Neve Campbell y el director Kevin Williamson.</p>
+                <div class="rating">
+                    <!-- <span class="stars">★★★★★</span>
+                    <span>9.3/10</span>-->
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Repito la estructura para las otras películas con los mismos ajustes responsivos -->
+        <div class="movie-card" style="animation-delay: 0.2s">
+            <div class="rank">6</div>
+            <div class="movie-image">
+                <img src="saw-xi-2025.jpg" alt="Saw-XI">
+            </div>
+            <h2 class="movie-title">Saw-XI</h2>
+            <div class="movie-info">
+                <p>Director: Kevin Greutert</p>
+                <p>Año: 2025</p>
+                <p>Género: Terror, Suspenso, Gore, Thriller.</p>
+                <p>Sinopsis: Saw XI es la próxima película de terror, gore y thriller estadounidense escrita por Patrick
+                    Melton y Marcus Dunstan, y dirigida por Kevin Greutert. Producida por Twisted Pictures y distribuida
+                    por Lionsgate, es la undécima entrega de la franquicia Saw y una secuela directa de Saw X.</p>
+                <div class="rating">
+                    <!-- <span class="stars">★★★★★</span>
+                    <span>9.3/10</span>-->
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- Repito la estructura para las otras películas con los mismos ajustes responsivos -->
+        <div class="movie-card" style="animation-delay: 0.2s">
+            <div class="rank">7</div>
+            <div class="movie-image">
+                <img src="The monkey-2025.jpg" alt="The monkey-2025">
+            </div>
+            <h2 class="movie-title">The monkey</h2>
+            <div class="movie-info">
+                <p>Director: </p>
+                <p>Año: 2025</p>
+                <p>Género: Terror</p>
+                <p>Sinopsis: The Monkey es una próxima película estadounidense de terror sobrenatural de 2025 escrita y
+                    dirigida por Osgood Perkins y protagonizada por Theo James, Tatiana Maslany, Elijah Wood, Christian
+                    Convery, Colin O'Brien, Rohan Campbell y Sarah Levy.</p>
+                <p>Fecha Tentativa de estreno: 21 de febrero de 2025</p>
+                <div class="rating">
+                    <!-- <span class="stars">★★★★★</span>
+                    <span>9.3/10</span>-->
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- Repito la estructura para las otras películas con los mismos ajustes responsivos -->
+        <div class="movie-card" style="animation-delay: 0.2s">
+            <div class="rank">8</div>
+            <div class="movie-image">
+                <img src="Frankenstein-2025.jpg" alt="Frankenstein">
+            </div>
+            <h2 class="movie-title">Frankenstein</h2>
+            <div class="movie-info">
+                <p>Director: Guillermo del Toro.</p>
+                <p>Año: 2025</p>
+                <p>Género: Terror, Drama, Ciencia Ficción Gótica.</p>
+                <p>Sinopsis: Frankenstein es una próxima película de terror de ciencia ficción gótica estadounidense
+                    escrita y dirigida por Guillermo del Toro, basada en la novela Frankenstein de Mary Shelley de 1818.
+                </p>
+                <p>Fecha tentativa de estreno: ?</p>
+                <div class="rating">
+                    <!-- <span class="stars">★★★★★</span>
+                    <span>9.3/10</span>-->
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- Repito la estructura para las otras películas con los mismos ajustes responsivos -->
+        <div class="movie-card" style="animation-delay: 0.2s">
+            <div class="rank">9</div>
+            <div class="movie-image">
+                <img src="Hombre_lobo-2025.jpg" alt="Hombre lobo">
+            </div>
+            <h2 class="movie-title">Hombre Lobo</h2>
+            <div class="movie-info">
+                <p>Director: Leigh Whannell.</p>
+                <p>Año: 2025</p>
+                <p>Género: Terror, Drama.</p>
+                <p>Sinopsis: Wolf Man es una próxima película estadounidense de terror y monstruos de 2025 dirigida por
+                    Leigh Whannell y escrita por Whannell, Corbett Tuck, Lauren Schuker Blum y Rebecca Angelo. Es un
+                    reinicio de la película de 1941 El hombre lobo de George Waggner y Curt Siodmak.</p>
+                <p>Fecha tentativa de estreno: 17 de enero de 2025.</p>
+                <div class="rating">
+                    <!-- <span class="stars">★★★★★</span>
+                    <span>9.3/10</span>-->
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Repito la estructura para las otras películas con los mismos ajustes responsivos -->
+        <div class="movie-card" style="animation-delay: 0.2s">
+            <div class="rank">10</div>
+            <div class="movie-image">
+                <img src="Destino_final_6_el_sacrificio.jpg" alt="Destino Finial 6">
+            </div>
+            <h2 class="movie-title">Destino final 6 El sacrificio</h2>
+            <div class="movie-info">
+                <p>Director: Zach Lipovsky, Adam Stein.</p>
+                <p>Año: 2025</p>
+                <p>Género: Terror, Sobrenatural.</p>
+                <p>Sinopsis: Destino final: Bloodlines es una próxima película de terror sobrenatural estadounidense de
+                    2025 dirigida por Zach Lipovsky y Adam Stein y escrita por Guy Busick y Lori Evans Taylor. Es la
+                    sexta entrega de la franquicia de películas Destino final. </p>
+                <p>Fecha tentativa de estreno: 16 de mayo de 2025.</p>
+                <div class="rating">
+                    <!-- <span class="stars">★★★★★</span>
+                    <span>9.3/10</span>-->
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Repito la estructura para las otras películas con los mismos ajustes responsivos -->
+        <div class="movie-card" style="animation-delay: 0.2s">
+            <div class="rank">11</div>
+            <div class="movie-image">
+                <img src="I_know_what_you_did_last_summer_2025.jpg" alt="I know what you did last summer">
+            </div>
+            <h2 class="movie-title">I know what you did last summer</h2>
+            <div class="movie-info">
+                <p>Director: Jennifer Kaytin Robinson.</p>
+                <p>Año: 2025</p>
+                <p>Género: Terror.</p>
+                <p>Sinopsis: La secuela sin título de I Know What You Did Last Summer es una próxima película de terror
+                    estadounidense dirigida por Jennifer Kaytin Robinson, quien coescribió el guión con Sam Lansky
+                    después de un borrador inicial de Leah McKendrick.</p>
+                <p>Fecha tentativa de estreno: 18 de julio de 2025.</p>
+                <div class="rating">
+                    <!-- <span class="stars">★★★★★</span>
+                    <span>9.3/10</span>-->
+                </div>
+            </div>
+        </div>
+
+        <!-- Repito la estructura para las otras películas con los mismos ajustes responsivos -->
+        <div class="movie-card" style="animation-delay: 0.2s">
+            <div class="rank">12</div>
+            <div class="movie-image">
+                <img src="Black_phone_2_2025.jpg" alt="Black Phone 2">
+            </div>
+            <h2 class="movie-title">Black Phone 2</h2>
+            <div class="movie-info">
+                <p>Director: </p>
+                <p>Año: 2025</p>
+                <p>Género: Terror, Suspenso.</p>
+                <p>Sinopsis: The Black Phone 2 es una próxima película estadounidense de terror sobrenatural dirigida
+                    por Scott Derrickson y coescrita por C. Robert Cargill, quienes producen con Jason Blum. Se trata de
+                    una secuela de The Black Phone, que a su vez es una adaptación del cuento homónimo de 2004 de Joe
+                    Hill.</p>
+                    <p>Fecha tentativa de estreno: 17 de octubre de 2025</p>
+                <div class="rating">
+                    <!-- <span class="stars">★★★★★</span>
+                    <span>9.3/10</span>-->
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const cards = document.querySelectorAll('.movie-card');
+
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '50px'
+            };
+
+            const observer = new IntersectionObserver(function (entries, observer) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            cards.forEach(card => {
+                card.style.opacity = '0';
+                observer.observe(card);
+            });
+        });
+    </script>
+</body>
+
+</html>
