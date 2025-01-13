@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Descubre un mundo lleno de entretenimiento con nuestra plataforma de películas en HD. Disfruta de los últimos estrenos, clásicos inolvidables y tus géneros favoritos, todo en alta definición y sin interrupciones.">
+  <meta name="keywords" content="PelículasHD, Online, Cine, Streaming, Gratis, PelículasEnEspañol, PelículasEnLatino, Estrenos, 2025, HD, VerPelículas, PelículasSubtituladas, Series, Animes">
+  <title>Películas HD</title>
+  <link href="tailwind.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/lucide-icons@0.243.0/css/lucide.min.css" rel="stylesheet">
+  <style>
+    .anime-icon {
+      background-color: #3B82F6;
+      color: white;
+      border-radius: 50%;
+      padding: 0.25rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .episode-number {
+      background-color: tomato;
+      color: white;
+      padding: 0.25rem;
+      border-radius: 0.25rem;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+
+    a {
+      color: black;
+    }
+
+    a:hover {
+      color: white;
+    }
+
+    .text-xs {
+      color: tomato;
+    }
+    .bg-gray-800{
+      background-color: tomato;
+    }
+    .bg-blue-500{
+      background-color: tomato;
+    }
+  </style>
+</head>
+
+<body class="bg-white min-h-screen flex flex-col">
+  <header class="bg-gray-800 text-white p-4">
+    <h1 class="text-2xl font-bold">⭐ 🎥 Películas en HD 🎥 ⭐</h1>
+  </header>
+  <main class="flex-1 p-4">
+    <section class="bg-gray-100 p-4">
+      <h2 class="text-xl font-bold">Próximos Estrenos 2025</h2>
+    </section>
+    <div class="flex flex-col md:flex-row">
+      <div id="animeList" class="w-full md:w-1/4 pr-4 md:pr-8 hidden md:block">
+        <ul class="space-y-2">
+          <li class="flex items-center space-x-2">
+            <div class="anime-icon">
+              <span class="text-xs"></span>
+            </div>
+            <span>The Conjuring: Last Rites</span>
+          </li>
+          <li class="flex items-center space-x-2">
+            <div class="anime-icon">
+              <span class="text-xs"></span>
+            </div>
+            <span>M3gan 2.0</span>
+          </li>
+          <li class="flex items-center space-x-2">
+            <div class="anime-icon">
+              <span class="text-xs"></span>
+            </div>
+            <span>28 años después</span>
+          </li>
+          <li class="flex items-center space-x-2">
+            <div class="anime-icon">
+              <span class="text-xs"></span>
+            </div>
+            <span>They Follow</span>
+          </li>
+          <li class="flex items-center space-x-2">
+            <div class="anime-icon">
+              <span class="text-xs"></span>
+            </div>
+            <span>Scream VII</span>
+          </li>
+          <li class="flex items-center space-x-2">
+            <div class="anime-icon">
+              <span class="text-xs"></span>
+            </div>
+            <span>Saw-XI</span>
+          </li>
+          <li class="flex items-center space-x-2">
+            <div class="anime-icon">
+              <span class="text-xs"></span>
+            </div>
+            <span>The monkey</span>
+          </li>
+          <li class="flex items-center space-x-2">
+            <div class="anime-icon">
+              <span class="text-xs"></span>
+            </div>
+            <span>Frankenstein</span>
+          </li>
+          <li class="flex items-center space-x-2">
+            <div class="anime-icon">
+              <span class="text-xs"></span>
+            </div>
+            <span>Hombre Lobo</span>
+          </li>
+          <li class="flex items-center space-x-2">
+            <div class="anime-icon">
+              <span class="text-xs"></span>
+            </div>
+            <span>Destino final 6 El sacrificio</span>
+          </li>
+          <li class="flex items-center space-x-2">
+            <div class="anime-icon">
+              <span class="text-xs"></span>
+            </div>
+            <span>I know what you did last summer</span>
+          </li>
+          <li class="flex items-center space-x-2">
+            <div class="anime-icon">
+              <span class="text-xs"></span>
+            </div>
+            <span>Black Phone 2</span>
+          </li>
+        </ul>
+      </div>
+      <div class="w-full md:w-3/4">
+        <button id="toggleButton" class="md:hidden bg-blue-500 text-white px-4 py-2 rounded mb-4"
+          onclick="toggleAnimeList()">Mostrar Lista</button>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          <div class="relative">
+            <div class="bg-gray-200 border-2 border-dashed rounded-xl w-full h-40">
+              <img class="border-2 border-dashed rounded-xl w-full h-40"
+                src="https://images.squarespace-cdn.com/content/v1/5f8efdafa5a28963388a96b2/9b40519a-efb0-4aa3-a400-54f684bc5bd3/heretic.jpg"
+                alt="Heretic" width="370" height="370">
+            </div>
+            <div class="episode-number">
+              <span class="text-xs"><a href="https://ghbrisk.com/xpf7wv06tfel" target="_blank">Link de
+                  descarga</a></span>
+            </div>
+            <div class="mt-2">
+              <h3 class="text-sm font-bold">Heretic-2024</h3>
+              <p class="text-xs">Terror, Suspenso</p>
+            </div>
+          </div>
+          <div class="relative">
+            <div class="bg-gray-200 border-2 border-dashed rounded-xl w-full h-40">
+              <img class="border-2 border-dashed rounded-xl w-full h-40"
+                src="https://www.infobae.com/new-resizer/8wgxmEFtljABq6fTYL9LcBVPgy4=/arc-anglerfish-arc2-prod-infobae/public/FUE74AQOJJB33GZJHDF5U6KUX4.jpg"
+                alt="No te sueltes" width="260" height="370">
+            </div>
+            <div class="episode-number">
+              <span class="text-xs"><a href="https://ghbrisk.com/c9dcy0cwqrll" target="_blank">Link de descarga</a></span>
+            </div>
+            <div class="mt-2">
+              <h3 class="text-sm font-bold">No te sueltes-2024</h3>
+              <p class="text-xs">Terror, Suspenso</p>
+            </div>
+          </div>
+          <div class="relative">
+            <div class="bg-gray-200 border-2 border-dashed rounded-xl w-full h-40">
+              <img class="border-2 border-dashed rounded-xl w-full h-40" src="https://www.latercera.com/resizer/-mjTala3_De7kGV4Sv0uYxY-0cc=/arc-anglerfish-arc2-prod-copesa/public/KBVGB555NZETLEGW4ZBC3VOLWY.jpg"
+                alt="Sakamoto days" width="260" height="370">
+            </div>
+            <div class="episode-number">
+              <span class="text-xs"><a href="https://ghbrisk.com/cejgq7cthbic" target="_blank">Ep 1</a></span>
+            </div>
+            <div class="mt-2">
+              <h3 class="text-sm font-bold">Sakamoto days</h3>
+              <p class="text-xs">Anime, Acción, Comedia, Shounen</p>
+            </div>
+          </div>
+          <div class="relative">
+            <div class="bg-gray-200 border-2 border-dashed rounded-xl w-full h-40">
+              <img class="border-2 border-dashed rounded-xl w-full h-40" src="https://www.latercera.com/resizer/-mjTala3_De7kGV4Sv0uYxY-0cc=/arc-anglerfish-arc2-prod-copesa/public/KBVGB555NZETLEGW4ZBC3VOLWY.jpg"
+                alt="Sakamoto days" width="260" height="370">
+            </div>
+            <div class="episode-number">
+              <span class="text-xs"><a href="https://ghbrisk.com/w4nivu2t6jnt" target="_blank">Ep 2</a></span>
+            </div>
+            <div class="mt-2">
+              <h3 class="text-sm font-bold">Sakamoto days</h3>
+              <p class="text-xs">Anime, Acción, Comedia, Shounen</p>
+            </div>
+          </div>
+          <div class="relative">
+            <div class="bg-gray-200 border-2 border-dashed rounded-xl w-full h-40">
+              <img class="border-2 border-dashed rounded-xl w-full h-40" src="https://www.latercera.com/resizer/-mjTala3_De7kGV4Sv0uYxY-0cc=/arc-anglerfish-arc2-prod-copesa/public/KBVGB555NZETLEGW4ZBC3VOLWY.jpg"
+                alt="Sakamoto days" width="260" height="370">
+            </div>
+            <div class="episode-number">
+              <span class="text-xs"><a href="">Ep 3</a></span>
+            </div>
+            <div class="mt-2">
+              <h3 class="text-sm font-bold">Sakamoto days</h3>
+              <p class="text-xs">Anime, Acción, Comedia, Shounen</p>
+            </div>
+          </div>
+          <div class="relative">
+            <div class="bg-gray-200 border-2 border-dashed rounded-xl w-full h-40">
+              <img class="border-2 border-dashed rounded-xl w-full h-40" src="https://www.latercera.com/resizer/-mjTala3_De7kGV4Sv0uYxY-0cc=/arc-anglerfish-arc2-prod-copesa/public/KBVGB555NZETLEGW4ZBC3VOLWY.jpg"
+                alt="Sakamoto days" width="260" height="370">
+            </div>
+            <div class="episode-number">
+              <span class="text-xs"><a href="">Ep 4</a></span>
+            </div>
+            <div class="mt-2">
+              <h3 class="text-sm font-bold">Sakamoto days</h3>
+              <p class="text-xs">Anime, Acción, Comedia, Shounen</p>
+            </div>
+          </div>
+          <div class="relative">
+            <div class="bg-gray-200 border-2 border-dashed rounded-xl w-full h-40">
+              <img class="border-2 border-dashed rounded-xl w-full h-40" src="https://www.latercera.com/resizer/-mjTala3_De7kGV4Sv0uYxY-0cc=/arc-anglerfish-arc2-prod-copesa/public/KBVGB555NZETLEGW4ZBC3VOLWY.jpg"
+                alt="Sakamoto days" width="260" height="370">
+            </div>
+            <div class="episode-number">
+              <span class="text-xs"><a href="">Ep 5</a></span>
+            </div>
+            <div class="mt-2">
+              <h3 class="text-sm font-bold">Sakamoto days</h3>
+              <p class="text-xs">Anime, Acción, Comedia, Shounen</p>
+            </div>
+          </div>
+          <div class="relative">
+            <div class="bg-gray-200 border-2 border-dashed rounded-xl w-full h-40">
+              <img class="border-2 border-dashed rounded-xl w-full h-40" src="https://img.etimg.com/thumb/width-1200,height-900,imgsize-1882225,resizemode-75,msid-114885579/magazines/panache/squid-game-2-release-date-what-to-expect-check-plot-cast-and-everything-you-need-to-know-about-the-korean-thriller.jpg"
+                alt="Squid Game" width="260" height="370">
+            </div>
+            <div class="episode-number">
+              <span class="text-xs"><a href="https://pastequest.com/?4a6138bc892af279#95KpdZGpQiLb2d3X68uT3XgkYWypqkY5dz6Fgc9jqzDR" target="_blank">Link de descarga</a></span>
+            </div>
+            <div class="mt-2">
+              <h3 class="text-sm font-bold">Squid Game 2T [Latino]</h3>
+              <p class="text-xs">Suspenso</p>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+  </main>
+  <footer class="bg-gray-800 text-white p-4 text-center">
+    <p>&copy; 2025-2026 PelículsHD. Todos los derechos reservados.</p>
+  </footer>
+  <script>
+    function toggleAnimeList() {
+      const animeList = document.getElementById('animeList');
+      if (animeList.classList.contains('hidden')) {
+        animeList.classList.remove('hidden');
+      } else {
+        animeList.classList.add('hidden');
+      }
+    }
+  </script>
+</body>
+
+</html>
