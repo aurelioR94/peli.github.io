@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MultiPaste</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playwrite+VN:wght@100&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: rgb(74, 3, 155);
+      color: black;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    header {
+      padding: 1rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #ffffff;
+      font-family: "Playwrite VN", serif;
+      font-optical-sizing: auto;
+      font-weight: 100;
+      font-style: normal;
+    }
+
+    nav {
+      background-color: rgb(57, 5, 117);
+      padding: 0.5rem;
+    }
+
+    nav .container {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    nav button {
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 0.25rem;
+      background-color: rgb(101, 9, 206);
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    nav button.active {
+      background-color: rgb(76, 7, 155);
+      border: 1px solid white;
+    }
+
+    nav button:hover {
+      background-color: rgb(76, 7, 155);
+      border: 1px solid white;
+    }
+
+    main {
+      flex: 1;
+      padding: 1rem;
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th,
+    td {
+      padding: 0.5rem;
+      text-align: left;
+    }
+
+    th {
+      background-color: rgb(57, 5, 117);
+      color: white;
+      border-radius: 6px;
+    }
+
+    td a {
+      color: rgb(255, 255, 255);
+      text-decoration: none;
+    }
+
+    td a:hover {
+      background-color: rgb(57, 5, 117);
+    }
+
+    footer {
+      background-color: rgb(57, 5, 117);
+      padding: 0.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #ffffff;
+    }
+
+    footer span {
+      margin: 0 0.5rem;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .text-e {
+      background-color: rgb(101, 9, 206);
+      border: solid 1px;
+      padding: 5px 5px 5px 5px;
+      border-radius: 30%;
+      font-size: xx-small;
+      color: rgb(255, 255, 255);
+    }
+
+    .p-desp {
+      text-align: justify;
+      color: white;
+    }
+
+    .p-title {
+      color: white;
+      font-weight: bold;
+    }
+
+    @media (max-width:480px) {
+      thead tbody{
+        overflow-x: auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>MultiPaste</h1>
+
+    <p class="p-desp"> <b class="p-title">Serie:</b> SweetPea 1 Temporada [Latino]</p>
+    <p style="text-align: justify;" class="p-title">Descripción:</p>
+    <p class="p-desp">Rhiannon no causa muy buena impresión: la gente pasa a su lado por la calle sin mirarla. No la
+      dejan ascender en el trabajo, el chico que le gusta no se compromete y su padre está muy enfermo. Entonces su vida
+      da un vuelco y se ve empujada al límite.</p>
+    <p class="p-desp"> <b class="p-title">Etiquetas: </b>Comedia negra.</p>
+
+  </header>
+  <nav>
+    <div class="container">
+      <button class="active" onclick="setActiveTab('Megaup')">Streamwish</button>
+      <button onclick="setActiveTab('Qiwi')">Qiwi</button>
+      <button onclick="setActiveTab('Droodrive')">Droodrive</button>
+      <button onclick="setActiveTab('Terabox')">Terabox</button>
+    </div>
+  </nav>
+  <main>
+    <table>
+      <thead>
+        <tr>
+          <th id="Megaup-header" class="active">Streamwish</th>
+          <th id="Qiwi-header" class="hidden">Qiwi</th>
+          <th id="Droodrive-header" class="hidden">Droodrive</th>
+          <th id="Terabox-header" class="hidden">Terabox</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td id="Megaup-1" class="active"><span class="text-e">Ep 1</span>&nbsp; &nbsp;<a
+              href="https://ghbrisk.com/iy8ovbl5j2g6" target="_blank">https://ghbrisk.com/iy8ovbl5j2g6</a></td>
+          <td id="Qiwi-1" class="hidden"><a href="www.LinkNotAvailable.com" target="_blank">Link not available</a></td>
+          <td id="Droodrive-1" class="hidden"><a href="www.LinkNotAvailable.com" target="_blank">Link not available</a>
+          </td>
+          <td id="Terabox-1" class="hidden"><a href="www.LinkNotAvailable.com" target="_blank">Link not available</a>
+          </td>
+        </tr>
+        <tr>
+          <td id="Megaup-2" class="active"><span class="text-e">Ep 2</span>&nbsp; &nbsp;<a
+              href="https://ghbrisk.com/ca3odr851o62" target="_blank">https://ghbrisk.com/ca3odr851o62</a></td>
+          <td id="Qiwi-2" class="hidden"><a href="www.LinkNotAvailable.com" target="_blank">Link not available</a></td>
+          <td id="Droodrive-2" class="hidden"><a href="www.LinkNotAvailable.com" target="_blank">Link not available</a>
+          </td>
+          <td id="Terabox-2" class="hidden"><a href="www.LinkNotAvailable.com" target="_blank">Link not available</a>
+          </td>
+        </tr>
+        <tr>
+          <td id="Megaup-3" class="active"><span class="text-e">Ep 3</span>&nbsp; &nbsp;<a
+              href="https://ghbrisk.com/tpt4kq5ss9pr" target="_blank">https://ghbrisk.com/tpt4kq5ss9pr</a></td>
+          <td id="Qiwi-3" class="hidden"></td>
+          <td id="Droodrive-3" class="hidden"><a href="www.LinkNotAvailable.com" target="_blank">Link not available</a>
+          </td>
+          <td id="Terabox-3" class="hidden"><a href="www.LinkNotAvailable.com" target="_blank">Link not available</a>
+          </td>
+        </tr>
+        <tr>
+          <td id="Megaup-4" class="active"><span class="text-e">Ep 4</span>&nbsp; &nbsp;<a
+              href="https://ghbrisk.com/sik5b9yrev2a" target="_blank">https://ghbrisk.com/sik5b9yrev2a</a></td>
+          <td id="Qiwi-4" class="hidden"></td>
+          <td id="Droodrive-4" class="hidden"></td>
+          <td id="Terabox-4" class="hidden"><a href="www.LinkNotAvailable.com" target="_blank">Link not available</a>
+          </td>
+        </tr>
+        <tr>
+          <td id="Megaup-5" class="active"><span class="text-e">Ep 5</span>&nbsp; &nbsp;<a
+              href="https://ghbrisk.com/g3ca7mg18xi0" target="_blank">https://ghbrisk.com/g3ca7mg18xi0</a></td>
+          <td id="Qiwi-5" class="hidden"></td>
+          <td id="Droodrive-5" class="hidden"></td>
+          <td id="Terabox-5" class="hidden"></td>
+        </tr>
+        <tr>
+          <td id="Megaup-6" class="active"><span class="text-e">Ep 6</span>&nbsp; &nbsp;<a
+              href="https://ghbrisk.com/7ji17334tikc" target="_blank">https://ghbrisk.com/7ji17334tikc</a></td>
+          <td id="Qiwi-5" class="hidden"></td>
+          <td id="Droodrive-5" class="hidden"></td>
+          <td id="Terabox-5" class="hidden"></td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+  <footer>
+    <div>
+      <span></span>
+      <span>Multipaste | Copyright © 2025-2026 All Rights Reserved.</span>
+    </div>
+
+  </footer>
+
+  <script>
+    function setActiveTab(tab) {
+      const buttons = document.querySelectorAll('nav button');
+      buttons.forEach(button => button.classList.remove('active'));
+      document.querySelector(`nav button[onclick="setActiveTab('${tab}')"]`).classList.add('active');
+
+      const headers = document.querySelectorAll('th');
+      headers.forEach(header => header.classList.add('hidden'));
+      document.getElementById(`${tab}-header`).classList.remove('hidden');
+
+      const rows = document.querySelectorAll('tbody tr');
+      rows.forEach(row => {
+        row.querySelectorAll('td').forEach(cell => cell.classList.add('hidden'));
+        document.getElementById(`${tab}-${row.rowIndex}`).classList.remove('hidden');
+      });
+    }
+  </script>
+</body>
+
+</html>
