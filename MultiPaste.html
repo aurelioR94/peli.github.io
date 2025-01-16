@@ -54,6 +54,7 @@
       color: white;
       cursor: pointer;
       transition: background-color 0.3s;
+      display: flex;
     }
 
     nav button.active {
@@ -96,19 +97,31 @@
 
     td a:hover {
       background-color: rgb(57, 5, 117);
+      padding: 5px 5px;
+      border-radius: 6px;
+      border: 1px solid white;
     }
 
     footer {
       background-color: rgb(57, 5, 117);
       padding: 0.5rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      /*.justify-content: space-between;*/
       color: #ffffff;
+      border-top: 2px solid white;
+      font-size: small;
+    }
+
+    .footer-center {
+      align-items: center;
+      text-align: center;
+      justify-items: center;
+
     }
 
     footer span {
       margin: 0 0.5rem;
+      align-items: center;
+      text-align: center;
     }
 
     .hidden {
@@ -135,8 +148,14 @@
     }
 
     @media (max-width:480px) {
-      thead tbody{
+      thead tbody {
         overflow-x: auto;
+      }
+    }
+
+    @media (max-width:480px) {
+      nav .container {
+        flex-direction: column;
       }
     }
   </style>
@@ -226,7 +245,7 @@
     </table>
   </main>
   <footer>
-    <div>
+    <div class="footer-center">
       <span></span>
       <span>Multipaste | Copyright © 2025-2026 All Rights Reserved.</span>
     </div>
