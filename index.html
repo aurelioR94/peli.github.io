@@ -1,180 +1,295 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
     content="Descarga Películas, Series y Animes en HD Gratis | Descubre un mundo lleno de entretenimiento con nuestra plataforma de películas en HD. Disfruta de los últimos estrenos, clásicos inolvidables y tus géneros favoritos, todo en alta definición y sin interrupciones.">
   <meta name="keywords"
     content="PelículasHD, Online, Cine, Streaming, Gratis, PelículasEnEspañol, PelículasEnLatino, Estrenos, 2025, HD, VerPelículas, PelículasSubtituladas, Series, Animes">
-    <title>Enlaces de Películas Series Animes</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #24262e;
-            margin: 0;
-            padding: 20px;
-        }
-        .container {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-            gap: 10px;
-            background: transparent;
-        }
-        .category {
-            background-color: #000000;
-            border: 1px solid #000000;
-            padding:5px;
-            text-align: center;
-            border-radius: 25px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-        .category a {
-            text-decoration: none;
-            color: gray;
-            font-size: 14px;
-        }
-        .category:hover {
-            background-color: #04d739;
-           
-        }
-        a:hover{
-            color: white;
-        }
-        /* Menu */
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: transparent;
-            padding: 10px 20px;
-            margin-bottom: 20px;
-         
-        }
-        .navbar-brand {
-            color: #fff;
-            font-size: 14px;
-            font-weight: bold;
-            text-decoration: none;
-        }
-        .navbar-menu {
-            display: flex;
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-        .navbar-menu li {
-            margin-left: 20px;
-        }
-        .navbar-menu a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 16px;
-        }
-        .navbar-toggle {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-        }
-        .navbar-toggle span {
-            background-color: #fff;
-            height: 3px;
-            width: 25px;
-            margin: 4px 0;
-        }
-        .search-bar {
-            display: flex;
-            align-items: center;
-        }
-        .search-bar input {
-            padding: 5px;
-            border: none;
-            border-radius: 3px;
-        }
-        .search-bar button {
-            background-color: #555;
-            color: #fff;
-            border: none;
-            padding: 5px 10px;
-            margin-left: 5px;
-            border-radius: 3px;
-            cursor: pointer;
-        }
-        @media (max-width: 768px) {
-            .navbar-menu {
-                display: none;
-                flex-direction: column;
-                width: 100%;
-                background-color: transparent;
-            }
-            .navbar-menu.active {
-                display: flex;
-            }
-            .navbar-menu li {
-                margin: 10px 0;
-                text-align: center;
-            }
-            .navbar-toggle {
-                display: flex;
-            }
-            .search-bar {
-                margin-top: 10px;
-                width: 100%;
-                justify-content: center;
-            }
-        }
-    </style>
+  <title>Enlaces de Películas Series Animes</title>
+  <style>
+    /* General Styles */
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #1a1a1a;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    a {
+      text-decoration: none;
+      color: #80cbc4;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    a:hover {
+      color: #a7ffeb;
+      transform: scale(1.1);
+    }
+
+    /* Header Styles */
+    header {
+      background-color: #263238;
+      padding: 10px 0;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+    }
+
+    .navbar-brand {
+      font-size: 1.5em;
+      font-weight: bold;
+      color: #fff;
+    }
+
+    /* Hamburger Menu Button */
+    .navbar-toggle {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 1.5em;
+      cursor: pointer;
+      padding: 0;
+      display: none;
+    }
+
+    /* Navbar Menu Styles */
+    .navbar-menu {
+      display: flex;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      align-items: center;
+    }
+
+    .navbar-menu li {
+      margin: 0 10px;
+    }
+
+    .navbar-menu a {
+      display: block;
+      padding: 8px 12px;
+      border-radius: 4px;
+      background-color: rgba(38, 50, 56, 0.5);
+      color: #fff;
+      transition: background-color 0.3s ease;
+    }
+
+    .navbar-menu a:hover {
+      background-color: rgba(38, 50, 56, 0.8);
+    }
+
+    /* Search Bar Styles */
+    .search-bar {
+      display: flex;
+      margin-left: 20px;
+    }
+
+    .search-bar input {
+      padding: 8px;
+      border: none;
+      border-radius: 4px 0 0 4px;
+      background-color: #37474f;
+      color: #eee;
+    }
+
+    .search-bar button {
+      background-color: #4db6ac;
+      color: #fff;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 0 4px 4px 0;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .search-bar button:hover {
+      background-color: #26a69a;
+    }
+
+    /* Container Styles */
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
+      flex: 1;
+    }
+
+    .category {
+      background-color: #37474f;
+      border: 1px solid #455a64;
+      border-radius: 8px;
+      margin: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      width: 90px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .category a {
+      
+      display: block;
+      padding: 5px 10px;
+      font-size: 0.7rem;
+      text-align: center;
+      color: #fff;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: color 0.3s ease, background-color 0.3s ease;
+    }
+
+    .category:hover {
+      background-color: #04d739;
+      transform: translateY(-5px);
+      box-shadow: 0 6px 8px rgba(77, 182, 172, 0.5);
+    }
+
+    .category a:hover {
+      background-color: rgba(77, 182, 172, 0.3);
+      color: #a7ffeb;
+    }
+
+    /* Footer Styles */
+    footer {
+      background-color: #263238;
+      color: #b0bec5;
+      text-align: center;
+      padding: 10px;
+      font-size: 0.8em;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .navbar-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #263238;
+        text-align: center;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        z-index: 10;
+      }
+
+      .navbar-menu li {
+        margin: 0;
+        width: 100%;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .navbar-menu li:last-child {
+        border-bottom: none;
+      }
+
+      .navbar-menu a {
+        padding: 12px;
+        border-radius: 0;
+      }
+
+      .navbar-toggle {
+        display: block;
+      }
+
+      .navbar.responsive .navbar-menu {
+        display: flex;
+      }
+
+      .search-bar {
+        margin-left: 0;
+        margin-top: 10px;
+      }
+
+      .search-bar input {
+        width: 70%;
+      }
+
+      .container {
+        padding: 10px;
+      }
+    }
+  </style>
 </head>
-<header>
-    <nav class="navbar">
-        <a href="#" target="_blank" class="navbar-brand">⭐ 🎥 Películas en HD 🎥 ⭐</a>
-        <ul class="navbar-menu">
-            <li><a href="#" target="_blank">Películas</a></li>
-            <li><a href="#" target="_blank">Series</a></li>
-            <li><a href="#" target="_blank">Animes</a></li>
-            <li><a href="proximos_estrenos.html" target="_blank">Proximos Estrenos</a></li>
-            <li><a href="#" target="_blank">More..</a></li>
 
-        </ul>
-        <div class="search-bar">
-            <input type="text" placeholder="...">
-            <button>Buscar</button>
-        </div>
-        <div class="navbar-toggle" id="navbarToggle">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-    </nav>
-</header>
 <body>
-    <div class="container">
-        <div class="category"><a href="https://cuty.io/zVs5zxnYEW" target="_blank"> Y dónde está el fantasma-2013</a></div>
-        <div class="category"><a href="https://cuty.io/8iYbgVPfe" target="_blank">Y dónde está el fantasma 2-2014</a></div>
-        <div class="category"><a href="#" target="_blank"></a></div>
-        <div class="category"><a href="#" target="_blank"></a></div>
-        <div class="category"><a href="#" target="_blank"></a></div>
-        <div class="category"><a href="#" target="_blank"></a></div>
-        <div class="category"><a href="MultiPaste.html" target="_blank">SweetPea</a></div>
-        <div class="category"><a href="https://cuty.io/A5TXCbB" target="_blank">Heretic-2024</a></div>
-        <div class="category"><a href="https://cuty.io/0VNH9f" target="_blank">No te sueltes-2024</a></div>
-        <div class="category"><a href="https://cuty.io/Igtcrqe3N2Ce" target="_blank">Squid Game 2T [Latino]</a></div>
-        <div class="category"><a href="https://cuty.io/tHg35u" target="_blank">Los otros-2001</a></div>
-        <div class="category"><a href="https://cuty.io/fireforce" target="_blank">Fire Force [Latino]</a></div>
-        <div class="category"><a href="https://cuty.io/RX0rdGaHjZ" target="_blank">Fire Force [Latino]</a></div>
-        <div class="category"><a href="https://cuty.io/XpmDN43aG" target="_blank">Death Stream-2022</a></div>
-        <div class="category"><a href="https://cuty.io/GVLGhb0UP" target="_blank">Death Stream-2022 [Online]</a></div>
-        <div class="category"><a href="https://cuty.io/PHMi8" target="_blank">Sakamoto Days</a></div>
-        <div class="category"><a href="#" target="_blank"></a></div>
-    </div>
+  <header>
+    <nav class="navbar">
+      <a href="#" class="navbar-brand">⭐ 🎥 Películas en HD 🎥 ⭐</a>
+      <button class="navbar-toggle">&#9776;</button>
+      <ul class="navbar-menu">
+        <li><a href="#">Películas</a></li>
+        <li><a href="#">Series</a></li>
+        <li><a href="#">Animes</a></li>
+        <li><a href="proximos_estrenos.html">Próximos Estrenos</a></li>
+      </ul>
+      <div class="search-bar">
+        <input type="text" placeholder="Buscar...">
+        <button>Buscar</button>
+      </div>
+    </nav>
+  </header>
+  <div class="container">
+    <div class="category"><a href="https://cuty.io/zVs5zxnYEW" target="_blank">Y dónde está el fantasma-2013</a></div>
+    <div class="category"><a href="https://cuty.io/8iYbgVPfe" target="_blank">Y dónde está el fantasma 2-2014</a></div>
+    <div class="category"><a href="MultiPaste.html" target="_blank">SweetPea</a></div>
+    <div class="category"><a href="https://cuty.io/A5TXCbB" target="_blank">Heretic-2024</a></div>
+    <div class="category"><a href="https://cuty.io/0VNH9f" target="_blank">No te sueltes-2024</a></div>
+    <div class="category"><a href="https://cuty.io/Igtcrqe3N2Ce" target="_blank">Squid Game 2T [Latino]</a></div>
+    <div class="category"><a href="https://cuty.io/tHg35u" target="_blank">Los otros-2001</a></div>
+    <div class="category"><a href="https://cuty.io/fireforce" target="_blank">Fire Force [Latino]</a></div>
+    <div class="category"><a href="https://cuty.io/RX0rdGaHjZ" target="_blank">Fire Force [Latino]</a></div>
+    <div class="category"><a href="https://cuty.io/XpmDN43aG" target="_blank">Death Stream-2022</a></div>
+    <div class="category"><a href="https://cuty.io/GVLGhb0UP" target="_blank">Death Stream-2022 [Online]</a></div>
+    <div class="category"><a href="https://cuty.io/PHMi8" target="_blank">Sakamoto Days</a></div>
+  </div>
 
-    <script>
-        const navbarToggle = document.getElementById('navbarToggle');
-        const navbarMenu = document.querySelector('.navbar-menu');
+  <footer>
+    <p>&copy; 2024 Películas en HD. Todos los derechos reservados. | <a href="#">Términos de Uso</a> | <a
+        href="#">Política de Privacidad</a>
+  </footer>
 
-        navbarToggle.addEventListener('click', () => {
-            navbarMenu.classList.toggle('active');
-        });
-    </script>
+  <script>
+    const navbarToggle = document.querySelector('.navbar-toggle');
+    const navbarMenu = document.querySelector('.navbar-menu');
+    const navbar = document.querySelector('.navbar');
+
+    navbarToggle.addEventListener('click', () => {
+      navbar.classList.toggle('responsive');
+    });
+
+    const categoryLinks = document.querySelectorAll('.category a');
+
+    categoryLinks.forEach(link => {
+      link.addEventListener('mouseover', () => {
+        link.style.transition = 'text-shadow 0.3s ease';
+        link.style.textShadow = '0 0 10px rgba(4, 215, 57, 0.8)';
+      });
+
+      link.addEventListener('mouseout', () => {
+        link.style.transition = 'text-shadow 0.3s ease';
+        link.style.textShadow = 'none';
+      });
+    });
+  </script>
 </body>
+
 </html>
