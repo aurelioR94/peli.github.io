@@ -7,10 +7,10 @@
     content="Descarga Películas, Series y Animes en HD Gratis | Descubre un mundo lleno de entretenimiento con nuestra plataforma de películas en HD. Disfruta de los últimos estrenos, clásicos inolvidables y tus géneros favoritos, todo en alta definición y sin interrupciones.">
   <meta name="keywords"
     content="PelículasHD, Online, Cine, Streaming, Gratis, PelículasEnEspañol, PelículasEnLatino, Estrenos, 2025, HD, VerPelículas, PelículasSubtituladas, Series, Animes">
-  <title>Enlaces de Películas Series Animes</title>
+  <title>Películas | Series | Animes</title>
   <style>
-    /* General Styles */
-    body {
+      /* General Styles */
+      body {
       font-family: 'Arial', sans-serif;
       background-color: #1a1a1a;
       color: #fff;
@@ -227,6 +227,33 @@
         padding: 10px;
       }
     }
+
+    /* Estilo para el botón de limpieza (X) */
+    .search-bar {
+      position: relative;
+      display: flex;
+    }
+
+    .search-bar input {
+      padding-right: 30px; /* Espacio para el botón X */
+    }
+
+    .search-bar .clear-button {
+      position: absolute;
+      right: 60px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 1.2em;
+      cursor: pointer;
+      display: none; /* Oculto por defecto */
+    }
+
+    .search-bar .clear-button:hover {
+      color: #a7ffeb;
+    }
   </style>
 </head>
 
@@ -242,32 +269,77 @@
         <li><a href="proximos_estrenos.html">Próximos Estrenos</a></li>
       </ul>
       <div class="search-bar">
-        <input type="text" placeholder="Buscar...">
-        <button>Buscar</button>
+        <input type="text" id="search-input" placeholder="Buscar...">
+        <button id="search-button">Buscar</button>
+        <button class="clear-button" id="clear-button">×</button> <!-- Botón X -->
       </div>
     </nav>
   </header>
-  <div class="container">
-    <div class="category"><a href="https://cuty.io/zVs5zxnYEW" target="_blank">Y dónde está el fantasma-2013</a></div>
-    <div class="category"><a href="https://cuty.io/8iYbgVPfe" target="_blank">Y dónde está el fantasma 2-2014</a></div>
-    <div class="category"><a href="MultiPaste.html" target="_blank">SweetPea</a></div>
-    <div class="category"><a href="https://cuty.io/A5TXCbB" target="_blank">Heretic-2024</a></div>
-    <div class="category"><a href="https://cuty.io/0VNH9f" target="_blank">No te sueltes-2024</a></div>
-    <div class="category"><a href="https://cuty.io/Igtcrqe3N2Ce" target="_blank">Squid Game 2T [Latino]</a></div>
-    <div class="category"><a href="https://cuty.io/tHg35u" target="_blank">Los otros-2001</a></div>
+  <div class="container" id="content-container">
+    <!-- Contenido del contenedor -->
+    <div class="category"><a href="" target="_blank"></a></div>
+    <div class="category"><a href="https://etextpad.com/uznkseq8s2" target="_blank">Flow</a></div>
+    <div class="category"><a href="https://etextpad.com/gll6t1fcl1" target="_blank">Paradise [Serie]</a></div>
+    <div class="category"><a href="https://etextpad.com/njje2rfi3d" target="_blank">The White Lotus-S03 [Online]</a></div>
+    <div class="category"><a href="https://etextpad.com/mws4jmz5cm" target="_blank">The White Lotus-S03</a></div>
+    <div class="category"><a href="https://cuty.io/zVs5zxnYEW" target="_blank">Y dónde está el fantasma</a></div>
+    <div class="category"><a href="https://cuty.io/8iYbgVPfe" target="_blank">Y dónde está el fantasma 2</a></div>
+    <div class="category"><a href="MultiPaste.html" target="_blank">SweetPea [Serie]</a></div>
+    <div class="category"><a href="https://cuty.io/A5TXCbB" target="_blank">Heretic</a></div>
+    <div class="category"><a href="https://cuty.io/0VNH9f" target="_blank">No te sueltes</a></div>
+    <div class="category"><a href="https://cuty.io/Igtcrqe3N2Ce" target="_blank">Squid Game [Serie]</a></div>
+    <div class="category"><a href="https://cuty.io/tHg35u" target="_blank">Los otros</a></div>
     <div class="category"><a href="https://cuty.io/fireforce" target="_blank">Fire Force [Latino]</a></div>
     <div class="category"><a href="https://cuty.io/RX0rdGaHjZ" target="_blank">Fire Force [Latino]</a></div>
-    <div class="category"><a href="https://cuty.io/XpmDN43aG" target="_blank">Death Stream-2022</a></div>
-    <div class="category"><a href="https://cuty.io/GVLGhb0UP" target="_blank">Death Stream-2022 [Online]</a></div>
+    <div class="category"><a href="https://cuty.io/XpmDN43aG" target="_blank">Death Stream</a></div>
+    <div class="category"><a href="https://cuty.io/GVLGhb0UP" target="_blank">Death Stream [Online]</a></div>
     <div class="category"><a href="https://cuty.io/PHMi8" target="_blank">Sakamoto Days</a></div>
   </div>
 
   <footer>
-    <p>&copy; 2024 Películas en HD. Todos los derechos reservados. | <a href="#">Términos de Uso</a> | <a
-        href="#">Política de Privacidad</a>
+    <p>&copy; 2025 Películas | Series | Animes en HD. Todos los derechos reservados. | <a href="#">Términos de Uso</a> | <a href="#">Política de Privacidad</a></p>
   </footer>
 
   <script>
+    // Función para manejar la búsqueda
+    document.getElementById('search-button').addEventListener('click', function () {
+      const searchTerm = document.getElementById('search-input').value.toLowerCase(); // Obtener término de búsqueda
+      const categories = document.querySelectorAll('.category'); // Obtener todos los elementos de categoría
+
+      categories.forEach(category => {
+        const title = category.querySelector('a').textContent.toLowerCase(); // Obtener el texto del enlace
+        if (title.includes(searchTerm)) {
+          category.style.display = 'flex'; // Mostrar si coincide
+        } else {
+          category.style.display = 'none'; // Ocultar si no coincide
+        }
+      });
+
+      // Mostrar u ocultar el botón X según el contenido del campo de búsqueda
+      const clearButton = document.getElementById('clear-button');
+      if (searchTerm.trim() !== '') {
+        clearButton.style.display = 'block';
+      } else {
+        clearButton.style.display = 'none';
+      }
+    });
+
+    // Función para limpiar el campo de búsqueda y restaurar todos los elementos
+    document.getElementById('clear-button').addEventListener('click', function () {
+      const searchInput = document.getElementById('search-input');
+      searchInput.value = ''; // Limpiar el campo de búsqueda
+      const categories = document.querySelectorAll('.category');
+
+      // Mostrar todos los elementos nuevamente
+      categories.forEach(category => {
+        category.style.display = 'flex';
+      });
+
+      // Ocultar el botón X
+      this.style.display = 'none';
+    });
+
+    // Manejo del menú responsive
     const navbarToggle = document.querySelector('.navbar-toggle');
     const navbarMenu = document.querySelector('.navbar-menu');
     const navbar = document.querySelector('.navbar');
@@ -276,6 +348,7 @@
       navbar.classList.toggle('responsive');
     });
 
+    // Efecto hover en los enlaces de categorías
     const categoryLinks = document.querySelectorAll('.category a');
 
     categoryLinks.forEach(link => {
@@ -291,5 +364,4 @@
     });
   </script>
 </body>
-
 </html>
